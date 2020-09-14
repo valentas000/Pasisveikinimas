@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pasisveikinimas</title>
+  </head>
+  <body>
+
+<h1>Pasisveikinimas pagal laiką</h1>
+
+
+
+<p> <span id="labas"></span> ir sveiki atvyke ! </p>
+
+
+<script>
+
+var d = new Date();
+var h = d.getHours();
+
+  var vakaras = h <= 3;
+  var rytas = h <= 11;
+  var diena = h <= 17;
+  var naktis = h <= 24;
+
+
+  if ( h = vakaras)
+  {
+     document.getElementById("labas").innerHTML = "labas vakaras";
+   }
+
+  else if (h  = rytas)
+  {
+      document.getElementById("labas").innerHTML = "labas rytas";
+  }
+
+  else if (h = diena)
+  {
+      document.getElementById("labas").innerHTML = "labas diena";
+  }
+
+  else if (h = naktis)
+  {
+      document.getElementById("labas").innerHTML = "labas vakaras";
+  }
+
+
+</script>
+
+
+
+  </body>
+</html>
