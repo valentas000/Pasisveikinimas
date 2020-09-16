@@ -1,0 +1,19 @@
+body { background-color: lightgrey; }
+
+p {
+  font-size: 21px;
+}
+
+h1, h2 { text-align: center;}
+
+#var { color: purple; }
+
+#lygu { color: blue; }
+
+#geltona { color:  yellow; }
+
+#red { color: red;}
+
+#green { color: green;}
+
+.minde { margin-left: 60px;}

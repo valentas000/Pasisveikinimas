@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Pasisveikinimas</title>
   </head>
   <body>
@@ -15,8 +16,9 @@
 
 <script>
 
-var d = new Date();
-var h = d.getHours();
+ var d = new Date();
+ var h = d.getHours();
+
 
   var vakaras = h <= 3;
   var rytas = h <= 11;
@@ -26,17 +28,17 @@ var h = d.getHours();
 
   if ( h = vakaras)
   {
-     document.getElementById("labas").innerHTML = "labas vakaras";
+     document.getElementById("labas").innerHTML = "labas vakaras ! O jūs ir ilgai naktinėjate. Bet smagu kad užsukot ";
    }
 
   else if (h  = rytas)
   {
-      document.getElementById("labas").innerHTML = "labas rytas";
+      document.getElementById("labas").innerHTML = "labas rytas ! skanių pusryčių arba rytinės kavos";
   }
 
   else if (h = diena)
   {
-      document.getElementById("labas").innerHTML = "labas diena";
+      document.getElementById("labas").innerHTML = "laba diena";
   }
 
   else if (h = naktis)
@@ -47,7 +49,45 @@ var h = d.getHours();
 
 </script>
 
+<p>Ne visi vienu metų aplankys šį puslapį. Vieni gali ryte, kiti iš vis tik po darbų 19h. <br>
+Tai pagalvojau - būtu smagu, jeigu ir pasisveikinimas priklausomai nuo dabartinio laiko kiekvienam apsilankiusiam būtu kitoks.</p>
 
+<h2> Štai kaip visas kodas veikia</h2>
 
+<p>Viskas parašyta javascript kalba</p>
+<p><span id="var">var</span> d <span id="lygu">=</span> <span id="var">new</span> <span id="geltona">Date</span>();  // šios dalies nepaaiškinsiu tiksliai, bet taip kuriamas datos kintamasis</p>
+<p><span id="var">var</span> h <span id="lygu">=</span> <span id="red">d</span>.<span id="lygu">getHours</span>();  // getHours reiškia - Gauti valandas. Dėl patogumo ir pasivadinau savo kitnamaji h kuris ir reikš mūsu valandas</p>
+
+<p>Toliau susižymėjau laiką nuo 0 iki 24 valandų</p>
+
+<div class="minde">
+<p><span id="var">var</span> vakaras <span id="lygu">=</span> h <span id="lygu"><=</span> <span id="geltona">3</span>; <br>
+ <span id="var">var</span> rytas <span id="lygu">=</span> h <span id="lygu"><=</span> <span id="geltona">11</span>;    <br>
+ <span id="var">var</span> diena <span id="lygu">=</span> h <span id="lygu"><=</span> <span id="geltona">17</span>;    <br>
+ <span id="var">var</span> naktis <span id="lygu">=</span> h <span id="lygu"><=</span> <span id="geltona">24</span>;   </p>
+ </div>
+
+ <p> Jeigu tarkim dabar yra 00 valandų, mes čia klausiam ar mūsų h kuris reliu laiku gali būti 0 yra daugiau už 3 ? Ar 2 yra daugiau už 3 ? ir ar 3 = 3 ? <br>
+na ir tolau žaidžiam su <span id="var">if</span> ir <span id="var">else if</span> klausimais.</p>
+
+<div class="minde">
+<p><span id="var">if</span> ( h <span id="lygu">=</span> vakaras) <br>
+{ <br>
+<span id="red">document</span>.<span id="lygu">getElementById</span>(<span id="green">"labas"</span>).<span id="red">innerHTML</span><span id="lygu"> = </span><span id="green">"labas vakaras"</span>; <br>}  </p>
+
+<p><span id="var">else if</span> ( h <span id="lygu">=</span> rytas) <br>
+{ <br>
+<span id="red">document</span>.<span id="lygu">getElementById</span>(<span id="green">"labas"</span>).<span id="red">innerHTML</span><span id="lygu"> = </span><span id="green">"labas rytas ! skanių pusryčių arba rytinės kavos"</span>; <br>}  </p>
+
+<p><span id="var">else if</span> ( h <span id="lygu">=</span> diena) <br>
+{ <br>
+<span id="red">document</span>.<span id="lygu">getElementById</span>(<span id="green">"labas"</span>).<span id="red">innerHTML</span><span id="lygu"> = </span><span id="green">"laba diena"</span>; <br>}  </p>
+
+<p><span id="var">else if</span> ( h <span id="lygu">=</span> naktis) <br>
+{ <br>
+<span id="red">document</span>.<span id="lygu">getElementById</span>(<span id="green">"labas"</span>).<span id="red">innerHTML</span><span id="lygu"> = </span><span id="green">"labas vakaras"</span>; <br>}  </p>
+</div>
+
+<script id="_wau8v1">var _wau = _wau || []; _wau.push(["tab", "6fk9sy6kha", "8v1", "bottom-right"]);</script><script async src="//waust.at/t.js"></script>
   </body>
 </html>
